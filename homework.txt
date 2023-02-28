@@ -1,0 +1,43 @@
+2.	Создать файл input.txt и записать в него 10 чисел через пробел.
+Считать из него эти числа.
+Затем записать их произведение в файл output.txt.
+file = open('input.txt', 'a')
+file.write(str(20)+ "\n")
+file.write(str(10)+ "\n")
+file.write(str(5)+ "\n")
+file.write(str(2)+"\n")
+file.write(str(1)+"\n")
+file.write(str(13)+"\n")
+file.write(str(5)+"\n")
+file.write(str(2)+"\n")
+file.write(str(1)+"\n")
+file.write(str(13)+"\n")
+file.close()
+file = open('input.txt', 'w')
+file.write(str(20)+ "\n")
+file.write(str(10)+ "\n")
+file.write(str(5)+ "\n")
+file.write(str(2)+"\n")
+file.write(str(1)+"\n")
+file.write(str(13)+"\n")
+file.write(str(5)+"\n")
+file.write(str(2)+"\n")
+file.write(str(1)+"\n")
+file.write(str(13)+"\n")
+file.close()
+file = open('input.txt', 'r')
+new_file = file. read()
+file.close()
+new_file1 = new_file.replace('\n', ' ').rstrip().split()
+new_file1 = list (map (int, new_file1))
+print (new_file1)
+multi= 1
+for i in new_file1:
+    multi *= i
+print((multi))
+file_2 = open ('output.txt','w')
+multi= 1
+for i in new_file1:
+    multi *= i
+    file_2.write(str(multi))
+file_2.close()
