@@ -1,3 +1,53 @@
 Hello Denis
 
-bhnh
+# 1)	Вам дана строка.
+# Выведите все подстроки, содержащие "cat".
+
+pattern = r"\w*cat\w*"
+some_str = " cat blakcat abroad caat catt nat map catter cat "
+cat = re.findall(pattern, some_str)
+print (cat)
+
+# 2)	Выведите строки, содержащие две буквы "z", между которыми ровно три символа.
+
+pattern = r"\bz\w{3}z\b"
+some_str = " zaaaz car zoroz jzoooz miuytu gztyuzoi z123z  cvgz183zftg z2_nz z12hzn"
+zaaaz = re.findall(pattern, some_str)
+print (zaaaz)
+
+# 3)	Номер должен быть длиной 10 знаков и начинаться с 8 или 9.
+# Есть список телефонных номеров, и нужно проверить их, используя регулярные выражения в Python
+
+pattern = r'[8-9]{1}[0-9]{9}\b'
+some_str = "1234567890 8974563251 9876541230  897 968 9685478965478 8292362536963 858-96-98"
+number = re.findall(pattern, some_str)
+print (number)
+
+# 4)	Дана строка, выведите все вхождения слов, начинающиеся на гласную букву.
+
+pattern = r'\b[aoyieu]{1}\w+'
+some_str = "vbhyr fgy adft bhy okjyhr ivbteygd ef"
+letter = re.findall(pattern, some_str)
+print (letter)
+
+# 5)	Дана строка. Вывести все числа этой строки, как отрицательные так и положительные.
+
+pattern = r'\-?\b\d+\b'
+some_str = "12 lkgjf -8 ljkh90 897 968 -009 858 -96 56gf98 25ku"
+number = re.findall(pattern, some_str)
+print (number)
+
+
+# 7)	Извлечь дату из строки. Формат даты dd –mm-yyyy.
+
+pattern = r'\d{2}-\d{2}-\d{4}'
+some_str = "12/05/2025 12.01.2021 12012013 12-04-1994 bhgyd cfde 12 259 31-03-2023 2021-25-05"
+number = re.findall(pattern, some_str)
+print (number)
+
+# 8)	Найти все слова, в которых есть хотя бы одна буква ‘b’
+
+pattern = r'\w*b\w*'
+some_str = "baby mobile fly boo october Bali 125b65 bbbb dog cat map ball"
+letter = re.findall(pattern, some_str)
+print (letter)
